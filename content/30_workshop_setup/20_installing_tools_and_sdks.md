@@ -22,17 +22,9 @@ Note that we are downloading the current [Long-Term Support](https://dotnet.micr
 We're all set up now! Let's start the [Modernization](../40_modernize_the_api.html).
 
 #### Using an AWS Cloud9 Environment
-If you are using a recently provisioned AWS Cloud9 environment it likely already has the .NET Core 3.1 SDK and Runtime installed. You can check by running `dotnet --version` in a Cloud9 terminal session.
 
-<pre>
-dotnet --version
-
-3.1.406
-</pre>
-
-If you see version 3.1 is installed you can continue to starting the [Modernization](../40_modernize_the_api.html)!
-
-If version 3.1 of the .NET SDK and Runtime aren't installed perform the following steps in a Cloud9 terminal session:
+##### Setup .NET on Cloud9 environment
+To install version 3.1 of the .NET SDK and Runtime follow these steps in a Cloud9 terminal session:
 
 1. Copy and paste the following to install the .NET SDK
     ```sh
@@ -45,11 +37,32 @@ If version 3.1 of the .NET SDK and Runtime aren't installed perform the followin
     source ~/.bashrc && \
     rm dotnet-install.sh
     ```
+   You will be asking to remove write-protected regular file 'dotnet-install.sh'. Simply answer 'y' and press enter to confirm.
+   
 1. Confirm the .NET Core SDK and Runtime is installed.
     ```sh
     dotnet --version
     ```
     
-##### Instructions for setting up GitHub access TBD
+
+##### Setup access to GitHub in Cloud9 environment
+
+1. Generate SSH key pair and display the public key to be copied to GitHub. Leave the default file name by pressing enter when asked for a file to save the key, and enter the passphrase on your choice (twice to confirm). You will see the key starting from "ssh-rsa"
+   ```sh
+   ssh-keygen -t rsa && \
+   cat /home/ec2-user/.ssh/id_rsa.pub
+   ```
+1. Go to your GitHub account [keys](https://github.com/settings/keys), click "New SSH key", add a title (for example "Stackery Workshop Cloud9 environment"), insert public key into "Key" section and click "Add SSH key"
+
+1. Check SSH agent is running, and add private SSH key to the registry. Enter your passphrase when asked
+   ```sh
+   eval $(ssh-agent -s) && \
+   ssh-add /home/ec2-user/.ssh/id_rsa
+   ```
+1. Add git author fields, replace your name and email below
+   ```sh
+   git config --global user.name <yourusername>
+   git config --global user.email <yourmail@example.com>
+   ```
 
 We're all set up now! Let's start the [Modernization](../40_modernize_the_api.html).

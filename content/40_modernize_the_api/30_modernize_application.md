@@ -17,10 +17,13 @@ git pull origin main
 ```
 
 ### Running the AWS Porting Assistant for .NET
+
+#### Merge prepared changes 
 {{% notice info %}}
 The Porting Assistant only runs on Windows at the current time. If you are on another OS or want to skip installing and running the assistant during the workshop you can merge in changes it would have made by running the following in your local checkout of your stack: `git merge origin/partially-ported`. (In case you get stuck in Cloud9's VIM editor during the merge process, try [these keybinding instructions](https://docs.aws.amazon.com/cloud9/latest/user-guide/keybindings-vim-windows-linux.html) to save your file and exit.) Then continue to the [Manual Updates](#manual-updates) section.
 {{% /notice %}}
 
+#### Run AWS Porting Assistant for .NET on Windows
 If you don't have it installed already, download and install it from the [AWS Porting Assistant for .NET](https://aws.amazon.com/porting-assistant-dotnet/) website. You will also need AWS credentials for the porting assistant. Use your favorite text editor to open `.aws\credentials` in your user home directory and add a profile for your AWS account. If you're using Event Engine you can find the profile values in the Event Engine workshop page. Otherwise, you can follow the instructions in AWS'[Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) documentation. It should look something like the following, though you may not have *aws_session_token* or *region* values:
 
 <pre>
