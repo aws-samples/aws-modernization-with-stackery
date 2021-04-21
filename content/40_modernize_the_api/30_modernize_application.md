@@ -18,7 +18,7 @@ git pull origin main
 
 ### Running the AWS Porting Assistant for .NET
 
-#### Merge prepared changes 
+#### Merge Prepared Changes
 {{% notice info %}}
 The Porting Assistant only runs on Windows at the current time. If you are on another OS or want to skip installing and running the assistant during the workshop you can merge in changes it would have made by running the following in your local checkout of your stack: `git merge origin/partially-ported`. (In case you get stuck in Cloud9's VIM editor during the merge process, try [these keybinding instructions](https://docs.aws.amazon.com/cloud9/latest/user-guide/keybindings-vim-windows-linux.html) to save your file and exit.) Then continue to the [Manual Updates](#manual-updates) section.
 {{% /notice %}}
