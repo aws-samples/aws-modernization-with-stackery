@@ -9,7 +9,7 @@ We have our existing catalog API running in our AWS account. To modernize it, we
 ### Create a Stackery Account
 Click [here](https://www.stackery.io/sign-up/?source=dotnet-workshop) to sign up for Stackery if you do not already have an account. If you already have an account, sign in at https://app.stackery.io.
 
-![Create a Stackery Account](/images/create-account.png)
+[![Create a Stackery Account](/images/create-account.png)](https://www.stackery.io/sign-up/?source=dotnet-workshop)
 
 ### Link your AWS Account
 Next, we need to link your AWS account to Stackery so it can help us manage our stack and environment we'll deploy it into. Click on the **Link My AWS Account** button in the Stackery dashboard if you just created a new Stackery account, or go to the [Linked AWS Accounts](https://app.stackery.io/settings/linked-accounts) settings page and click the **Link New AWS Account** button.
