@@ -35,9 +35,8 @@ To install version 3.1 of the .NET SDK and Runtime follow these steps in a Cloud
     ./dotnet-install.sh -c 3.1 && \
     echo 'PATH=$HOME/.dotnet:$PATH' >> ~/.bashrc && \
     source ~/.bashrc && \
-    rm dotnet-install.sh
+    rm -f dotnet-install.sh
     ```
-   You will be asking to remove write-protected regular file 'dotnet-install.sh'. Simply answer 'y' and press enter to confirm.
    
 1. Confirm the .NET Core SDK and Runtime is installed.
     ```sh
